@@ -1,9 +1,9 @@
 import prismadb from "@/lib/prismadb";
 import { auth } from "@clerk/nextjs"
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 
-export async function PATH(
-    req: Request,
+export async function PATCH(
+    req: NextRequest,
     { params } : {params:{storeId: string}}
 ) {
     try{
@@ -40,7 +40,7 @@ export async function PATH(
 
 
 export async function DELETE(
-    req: Request,
+    req: NextRequest,
     { params } : {params:{storeId: string}}
 ) {
     try{
