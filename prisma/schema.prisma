@@ -22,6 +22,7 @@ model Store{
 
 model Billboard{
   id String @id @default(uuid())
+  name String
   storeId String
   store Store @relation("StoreToBillboard", fields: [storeId], references: [id])
   label String
